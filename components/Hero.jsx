@@ -1,66 +1,60 @@
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { TrendingUp, Users, Zap } from "lucide-react";
 
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { ContainerTextFlip } from "./ui/container-text-flip";
 
-const Hero = ({
-  badge = "✨ Dr Ramesh Barupal says",
-  heading = "Say Goodbye to Kidney Stones – Without Surgery, Within 72 Hours",
-  description = "Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project.",
-  buttons = {
-    primary: {
-      text: "Discover all components",
-      url: "https://www.shadcnblocks.com",
-    },
-    secondary: {
-      text: "View on GitHub",
-      url: "https://www.shadcnblocks.com",
-    },
-  },
-  image = {
-    src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg",
-    alt: "Hero section demo image showing interface components",
-  },
-}) => {
+const Hero = () => {
   return (
-    <section className="py-32">
-      <div className="container mx-auto">
-        <div className="grid items-center gap-8 lg:grid-cols-2">
-          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-            {badge && (
-              <Badge variant="outline">
-                {badge}
-                <ArrowUpRight className="ml-2 size-4" />
-              </Badge>
-            )}
-            <h1 className="my-6 text-4xl font-bold text-pretty lg:text-6xl">
-              {heading}
-            </h1>
-            <p className="text-muted-foreground mb-8 max-w-xl lg:text-xl">
-              {description}
-            </p>
-            <div className="flex w-full flex-col justify-center gap-2 sm:flex-row lg:justify-start">
-              {buttons.primary && (
-                <Button asChild className="w-full sm:w-auto">
-                  <a href={buttons.primary.url}>{buttons.primary.text}</a>
-                </Button>
-              )}
-              {buttons.secondary && (
-                <Button asChild variant="outline" className="w-full sm:w-auto">
-                  <a href={buttons.secondary.url}>
-                    {buttons.secondary.text}
-                    <ArrowRight className="size-4" />
-                  </a>
-                </Button>
-              )}
-            </div>
+    <section className="h-full w-screen overflow-hidden py-32">
+      <div className="container mx-auto border-t border-b border-dashed">
+        <div className="relative flex w-full max-w-5xl flex-col justify-start border border-t-0 border-dashed px-5 py-12 md:items-center md:justify-center lg:mx-auto">
+          <p className="text-muted-foreground flex items-center gap-2 gap-3 text-sm">
+            <span className="inline-block size-2 rounded bg-green-500" />
+            NEW BLOCKS IN 10 DAYS
+          </p>
+          <div className="mt-3 flex w-full max-w-xl flex-col gap-4 text-5xl font-semibold tracking-tighter md:text-center md:text-6xl lg:text-left lg:text-7xl">
+            <h1 className="z-10 inline">Say Goodbye to</h1>
+            <ContainerTextFlip
+              className="text-4xl font-semibold tracking-tighter md:left-1/2 md:-translate-x-1/2 md:text-5xl lg:left-auto lg:translate-x-0 lg:text-7xl"
+              words={["Kidney Stones", "Fatty Liver", "Migrain", "Thyroid"]}
+            />
+            <h1 className="z-10 inline md:mr-3">Without Surgery</h1>
           </div>
-          <img
-            src={image.src}
-            alt={image.alt}
-            className="max-h-96 w-full rounded-md object-cover"
-          />
         </div>
+        <div className="mx-auto flex w-full max-w-5xl flex-col items-center justify-center border border-t-0 border-b-0 border-dashed py-20">
+          <div className="w-full max-w-2xl space-y-5 md:text-center">
+            <p className="text-muted-foreground px-5 lg:text-lg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam,{" "}
+            </p>
+            <Button className="mx-5 h-12 rounded-lg">Get Started Now</Button>
+          </div>
+        </div>
+        <ul className="mx-auto grid h-44 w-full max-w-5xl grid-cols-1 border border-b-0 border-dashed md:h-34 md:grid-cols-2 lg:h-24 lg:grid-cols-3">
+          <li className="flex h-full items-center justify-between gap-10 px-5 md:gap-3 lg:justify-center">
+            <div className="bg-muted flex size-12 items-center justify-center rounded-lg">
+              <Zap className="text-muted-foreground size-6" />
+            </div>
+            <p className="text-muted-foreground text-lg">
+              10x Faster Development
+            </p>
+          </li>
+          <li className="flex h-full items-center justify-between gap-10 border-t border-l border-dashed px-5 md:gap-3 lg:justify-center lg:border-t-0">
+            <div className="bg-muted flex size-12 items-center justify-center rounded-lg">
+              <Users className="text-muted-foreground size-6" />
+            </div>
+            <p className="text-muted-foreground text-lg">10,000+ Developers</p>
+          </li>
+          <li className="col-span-1 flex h-full items-center justify-between gap-10 border-t border-l border-dashed px-5 md:col-span-2 md:justify-center md:gap-3 lg:col-span-1 lg:border-t-0">
+            <div className="bg-muted flex size-12 items-center justify-center rounded-lg">
+              <TrendingUp className="text-muted-foreground size-6" />
+            </div>
+            <p className="text-muted-foreground text-lg">
+              25% Conversion Boost
+            </p>
+          </li>
+        </ul>
       </div>
     </section>
   );
