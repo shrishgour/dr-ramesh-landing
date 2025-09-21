@@ -4,21 +4,21 @@ import { Statistics } from "./Statistics";
 
 function About() {
   return (
-    <section className="h-full w-screen overflow-hidden pb-24">
-      <div className="container mx-auto border-t border-b border-dashed">
+    <section id="about" className="h-full w-screen overflow-hidden pb-24">
+      <div className="bg-accent container mx-auto rounded-lg border-t border-b border-dashed">
         <div className="relative grid max-w-7xl grid-cols-1 gap-14 border border-t-0 border-b-0 border-dashed px-5 py-12 md:grid-cols-[1fr_2fr] md:gap-24 md:px-10 lg:mx-auto">
           <div className="bg-primary-300 relative flex h-96 w-full flex-col items-center justify-center overflow-hidden rounded-lg">
             <div className="bg-primary-800 pointer-events-none absolute inset-0 h-full w-full [mask-image:radial-gradient(transparent,white)]" />
             <Image
               src={pilot}
-              alt="Dr Ramesh Barupal sitting in his clinic."
+              alt="Dr. Ramesh Barupal homeopathy doctor portrait"
               className="z-10 size-80 object-cover"
             />
           </div>
           <div className="flex flex-col justify-between">
             <div className="pb-6">
               <h2 className="mb-8 text-3xl font-medium md:text-4xl">
-                <span className="from-primary/60 to-primary bg-gradient-to-b bg-clip-text text-transparent">
+                <span className="from-primary/60 to-primary bg-gradient-to-b bg-clip-text font-semibold text-transparent">
                   Meet{" "}
                 </span>
                 Dr. Ramesh Barupal

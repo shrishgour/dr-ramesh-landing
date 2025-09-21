@@ -68,7 +68,7 @@ const Feature = ({
   ],
 }) => {
   return (
-    <section className="pb-24">
+    <section id="treatment" className="pb-24">
       <div className="container mx-auto border-t border-b border-dashed">
         <div className="relative flex w-full max-w-7xl flex-col items-center justify-center border border-t-0 border-b-0 border-dashed px-5 py-12 md:px-10 lg:mx-auto lg:px-15">
           <div className="relative mx-auto mt-3 text-center text-3xl font-medium tracking-tight md:text-4xl">

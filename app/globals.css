@@ -46,7 +46,7 @@
   --card-foreground: oklch(0.2742 0.0208 165.96);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.2742 0.0208 165.96);
-  --primary: oklch(0.765 0.177 163.22);
+  --primary: #00d492;
   --primary-foreground: oklch(0 0 0);
   --secondary: oklch(0.551 0.0899 200.52);
   --secondary-foreground: oklch(1 0 0);
@@ -213,6 +213,13 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+
+  section {
+    @apply scroll-m-20;
   }
 }
 

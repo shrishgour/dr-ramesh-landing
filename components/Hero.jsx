@@ -11,7 +11,7 @@ import { ContainerTextFlip } from "./ui/container-text-flip";
 
 const Hero = () => {
   return (
-    <section className="h-full w-screen overflow-hidden py-24">
+    <section id="hero" className="h-full w-screen overflow-hidden py-24">
       <div className="container mx-auto border-t border-b border-dashed">
         <div className="relative flex w-full max-w-7xl flex-col items-center justify-center border border-t-0 border-dashed px-5 py-12 lg:mx-auto">
           <p className="text-muted-foreground flex items-center gap-3 text-sm uppercase">
@@ -36,14 +36,27 @@ const Hero = () => {
               Kidney Stones. Personalized care without side effects.
             </p>
             <div className="flex items-center justify-center gap-3 py-8 md:gap-4">
-              <Button className="h-12 w-36 rounded-lg text-sm md:h-14 md:w-42 md:text-base">
-                <MessageCircle className="size-5 md:size-6" /> Whatsapp
+              <Button
+                className="h-12 w-36 rounded-lg text-sm md:h-14 md:w-42 md:text-base"
+                asChild
+              >
+                <a
+                  href="https://wa.me/918460541860?text=Hello%20Dr.Ramesh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MessageCircle className="size-5 md:size-6" /> Whatsapp
+                </a>
               </Button>
               <Button
                 variant="secondary"
                 className="h-12 w-36 rounded-lg text-sm md:h-14 md:w-42 md:text-base"
+                asChild
               >
-                <PhoneCallIcon className="size-5 md:size-6" /> Call Now
+                <a href="tel:+918460541860">
+                  <PhoneCallIcon className="size-5 md:size-6" />
+                  Call Now
+                </a>
               </Button>
             </div>
           </div>

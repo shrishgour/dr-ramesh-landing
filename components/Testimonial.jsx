@@ -1,6 +1,6 @@
 "use client";
 
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Carousel,
   CarouselContent,
@@ -95,7 +95,7 @@ const Testimonial = () => {
   }, [api]);
 
   return (
-    <section className="h-full w-screen overflow-hidden pb-24">
+    <section id="testimonial" className="h-full w-screen overflow-hidden pb-24">
       <div className="container mx-auto border-t border-b border-dashed">
         <div className="relative flex w-full max-w-7xl flex-col items-center justify-center border border-t-0 border-dashed px-5 py-12 lg:mx-auto">
           <div className="relative mx-auto mt-3 text-center text-3xl font-medium tracking-tight md:text-4xl">
@@ -138,6 +138,11 @@ const TestimonialCard = ({ testimonial }) => (
   <div className="bg-accent mb-8 rounded-xl px-6 py-8 sm:py-6">
     <div className="flex items-center justify-between gap-20">
       <div className="bg-muted-foreground/20 relative hidden aspect-3/4 w-full max-w-[18rem] shrink-0 rounded-xl lg:block">
+        <img
+          src={testimonial.avatar}
+          alt="Avatar Portrait"
+          className="z-10 h-full w-full object-cover"
+        />
         <div className="bg-primary absolute top-1/4 right-0 flex h-12 w-12 translate-x-1/2 items-center justify-center rounded-full">
           <svg
             width="102"
@@ -156,8 +161,9 @@ const TestimonialCard = ({ testimonial }) => (
       </div>
       <div className="flex flex-col justify-center">
         <div className="flex items-center justify-between gap-1">
-          {/* <div className="hidden items-center gap-4 sm:flex md:hidden">
+          <div className="hidden items-center gap-4 sm:flex md:hidden">
             <Avatar className="h-8 w-8 md:h-10 md:w-10">
+              <AvatarImage src={testimonial.avatar} />
               <AvatarFallback className="bg-primary text-primary-foreground text-xl font-medium">
                 {testimonial.name.charAt(0)}
               </AvatarFallback>
@@ -168,7 +174,7 @@ const TestimonialCard = ({ testimonial }) => (
                 {testimonial.designation}
               </p>
             </div>
-          </div> */}
+          </div>
           <div className="flex items-center gap-1">
             <StarIcon className="fill-muted-foreground stroke-muted-foreground h-5 w-5" />
             <StarIcon className="fill-muted-foreground stroke-muted-foreground h-5 w-5" />
@@ -182,6 +188,7 @@ const TestimonialCard = ({ testimonial }) => (
         </p>
         <div className="mt-6 flex items-center gap-4 sm:hidden md:flex">
           <Avatar>
+            <AvatarImage src={testimonial.avatar} />
             <AvatarFallback className="bg-primary text-primary-foreground text-xl font-medium">
               {testimonial.name.charAt(0)}
             </AvatarFallback>
