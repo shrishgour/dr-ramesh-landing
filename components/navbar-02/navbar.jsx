@@ -20,7 +20,7 @@ const Navbar = () => {
             Sign In
           </Button> */}
           <Button asChild>
-            <a href="tel:+918460541860">Call Now</a>
+            <a href="tel:8947048749">Call Now</a>
           </Button>
           <ThemeButton />
 

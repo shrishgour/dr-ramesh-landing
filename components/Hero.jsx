@@ -41,7 +41,7 @@ const Hero = () => {
                 asChild
               >
                 <a
-                  href="https://wa.me/918460541860?text=Hello%20Dr.Ramesh"
+                  href="https://wa.me/8947048749?text=Hello%20Dr.Ramesh"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -53,7 +53,7 @@ const Hero = () => {
                 className="h-12 w-36 rounded-lg text-sm md:h-14 md:w-42 md:text-base"
                 asChild
               >
-                <a href="tel:+918460541860">
+                <a href="tel:8947048749">
                   <PhoneCallIcon className="size-5 md:size-6" />
                   Call Now
                 </a>

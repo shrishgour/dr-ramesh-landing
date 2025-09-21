@@ -14,22 +14,24 @@ const Contact = () => (
         </div>
         <div className="mx-auto grid max-w-(--breakpoint-xl) gap-16 py-24 md:grid-cols-2 md:gap-10 lg:grid-cols-3">
           <div className="flex flex-col items-center text-center">
-            <div className="bg-primary/5 dark:bg-primary/10 text-primary flex h-12 w-12 items-center justify-center rounded-full">
+            <div className="bg-primary text-primary-foreground mb-8 flex size-10 shrink-0 items-center justify-center rounded-lg md:size-12">
               <MessageCircle />
             </div>
             <h3 className="mt-6 text-xl font-semibold">Whatsapp</h3>
             <p className="text-muted-foreground mt-2">
-              Our friendly team is here to help.
+              Dr. Ramesh is here to help.
             </p>
             <Link
               className="text-primary mt-4 font-medium"
-              href="mailto:akashmoradiya3444@gmail.com"
+              href="https://wa.me/8947048749?text=Hello%20Dr.Ramesh"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              akashmoradiya3444@gmail.com
+              Drop a message for a quick chat
             </Link>
           </div>
           <div className="flex flex-col items-center text-center">
-            <div className="bg-primary/5 dark:bg-primary/10 text-primary flex h-12 w-12 items-center justify-center rounded-full">
+            <div className="bg-primary text-primary-foreground mb-8 flex size-10 shrink-0 items-center justify-center rounded-lg md:size-12">
               <MapPinIcon />
             </div>
             <h3 className="mt-6 text-xl font-semibold">Clinic</h3>
@@ -46,16 +48,16 @@ const Contact = () => (
             </Link>
           </div>
           <div className="flex flex-col items-center text-center">
-            <div className="bg-primary/5 dark:bg-primary/10 text-primary flex h-12 w-12 items-center justify-center rounded-full">
+            <div className="bg-primary text-primary-foreground mb-8 flex size-10 shrink-0 items-center justify-center rounded-lg md:size-12">
               <PhoneIcon />
             </div>
             <h3 className="mt-6 text-xl font-semibold">Phone</h3>
             <p className="text-muted-foreground mt-2">24/7 Avaliable on Call</p>
             <Link
               className="text-primary mt-4 font-medium"
-              href="tel:+918460541860"
+              href="tel:8947048749"
             >
-              +918460541860
+              +91-8460541860
             </Link>
           </div>
         </div>
