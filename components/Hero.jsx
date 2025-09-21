@@ -41,7 +41,7 @@ const Hero = () => {
                 asChild
               >
                 <a
-                  href="https://wa.me/8947048749?text=Hello%20Dr.Ramesh"
+                  href="https://wa.me/+918947048749?text=Hello%20Dr.Ramesh"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
